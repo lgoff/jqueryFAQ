@@ -4,37 +4,54 @@
 <head>
     <title>FAQ</title>
     <style type="text/css">
-        body {
-            position: relative;
-        }
-        * {
-            border: 1px solid red;
-        }
-        h1{color: rgb(159, 13, 153);}
-        h2 {
-            padding: 0 0 0 60px;
-            cursor: pointer;
-            height: 50px;
-            color: rgb(26, 237, 237);
-        }
-        .close {
-            background: url('assets/close.png') no-repeat;
-        }
-        .open {
-            background: url('assets/open.png') no-repeat;
-        }
-        section {
-            margin: 10px;
-            padding: 10px;
-            background-color: #999;
-        }
+    body {
+        position: relative;
+    }
+    
+    h1 {
+        color: rgb(159, 13, 153);
+    }
+    
+    h2 {
+        padding: 0 0 0 60px;
+        cursor: pointer;
+        height: 50px;
+        color: rgb(26, 237, 237);
+    }
+    
+    .close {
+        background: url('assets/close.png') no-repeat;
+    }
+    
+    .open {
+        background: url('assets/open.png') no-repeat;
+    }
+    
+    section {
+        margin: 10px;
+        padding: 10px;
+        background-color: #999;
+    }
     </style>
-    <script type="text/javascript" src="jquery-1.11.1.js"></script>
+    <script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+    <!-- <script type="text/javascript" src="js/jquery-ui.js"></script>-->
     <script type="text/javascript">
-        ////could use toggle which is show/hide but that would not allow for the graphics
-        $(document).ready(function () {
-          
-        }); // end of ready()
+    ////could use toggle which is show/hide but that would not allow for the graphics
+    $(document).ready(function() {
+    $(".answer").hide();
+    $(".open").show();
+    
+    $('.main').find('.open').click(function() {
+
+        //Expand or collapse this panel
+        $(this).next().slideToggle('fast');
+
+        //Hide the other panels
+        $(".answer").not($(this).next()).slideUp('fast');
+
+    });
+
+    }); // end of ready()
     </script>
 </head>
 
