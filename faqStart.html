@@ -3,79 +3,36 @@
 
 <head>
     <title>FAQ</title>
-    <style type="text/css">
-    body {
-        position: relative;
-    }
-    
-    h1 {
-        color: rgb(159, 13, 153);
-    }
-    
-    h2 {
-        padding: 0 0 0 60px;
-        cursor: pointer;
-        height: 50px;
-        color: rgb(26, 237, 237);
-    }
-    
-    .close {
-        background: url('assets/close.png') no-repeat;
-    }
-    
-    .open {
-        background: url('assets/open.png') no-repeat;
-    }
-    
-    section {
-        margin: 10px;
-        padding: 10px;
-        background-color: #999;
-    }
-    </style>
+   <!-- Custom CSS -->
+    <link href="css/faq.css" rel="stylesheet" type="text/css">
+
     <script type="text/javascript" src="js/jquery-1.11.1.js"></script>
-    <!-- <script type="text/javascript" src="js/jquery-ui.js"></script>-->
-    <script type="text/javascript">
-    ////could use toggle which is show/hide but that would not allow for the graphics
-    $(document).ready(function() {
-    $(".answer").hide();
-    $(".open").show();
-    
-    $('.main').find('.open').click(function() {
 
-        //Expand or collapse this panel
-        $(this).next().slideToggle('fast');
+    <script type="text/javascript" src="js/faq.js"></script>
 
-        //Hide the other panels
-        $(".answer").not($(this).next()).slideUp('fast');
-
-    });
-
-    }); // end of ready()
-    </script>
 </head>
 
 <body>
     <h1>FAQ</h1>
     <div class="main">
         <section>
-            <h2 class="open">First question.</h2>
+            <h2 class="open">First question</h2>
             <p class="answer">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </section>
         <section>
-            <h2 class="open">Second question.</h2>
+            <h2 class="open">Second question</h2>
             <p class="answer">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </section>
         <section>
-            <h2 class="open">Third question.</h2>
+            <h2 class="open">Third question</h2>
             <p class="answer">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </section>
         <section>
-            <h2 class="open">Fourth question.</h2>
+            <h2 class="open">Fourth question</h2>
             <p class="answer">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </section>
         <section>
-            <h2 class="open">Fifth question.</h2>
+            <h2 class="open">Fifth question</h2>
             <p class="answer">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </section>
     </div>

@@ -1,0 +1,56 @@
+@font-face {
+    font-family: 'franklin';
+    src: url("../fonts/ITCFranklinGothicStd-Book.otf");
+}
+
+@font-face {
+    font-family: 'franklinHvy';
+    src: url("../fonts/ITCFranklinGothicStd-Hvy.otf");
+}
+
+body {
+    position: relative;
+    background-color: #E0EEEE;
+    padding-bottom: 50px;
+}
+
+h1 {
+    color: #2F4F4F;
+    font-size: 70px;
+    padding-left: 10px;
+    margin-top: 25px;
+    margin-bottom: 5px;
+    font-family: 'franklinHvy';
+    letter-spacing: .4px;
+}
+
+h2 {
+    padding: 15px 0 0 60px;
+    cursor: pointer;
+    height: 40px;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'franklin';
+        letter-spacing: .3px;
+}
+
+p {
+    color: #fff;
+    padding-left: 60px;
+    font-family: 'franklin';
+}
+
+.close {
+    background: url('../assets/close.png') no-repeat;
+}
+
+.open {
+    background: url('../assets/open.png') no-repeat;
+}
+
+section {
+    margin: 10px;
+    padding: 10px;
+    background-color: #7A8B8B;
+    border-left: 4px solid #2F4F4F;
+}

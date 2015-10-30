@@ -1,33 +1,42 @@
- ////could use toggle which is show/hide but that would not allow for the graphics
-
-  $(document).ready(function() {
-
-        $("p.answer").hide();
-        $("h2.open").show();
 
 
+    ////could use toggle which is show/hide but that would not allow for the graphics
+    $(document).ready(function() {
+        $(".answer").hide();
 
-        $( "#main" )
-    .queue( "steps", function( next ) {
-        $('#main').accordion(); //accordion
-    } )
-    .queue( "steps", function( next ) {
-        $("h2").animate({
-                rotate: "+=90deg",},300); //rotate
-    } )
-    .dequeue( "steps" );
+        $('.main h2').click(function(){
 
+        	var $currentAnswer = $(this).next('.answer');
 
- //    $('.menulink').click(function(e){
- //     e.preventDefault();
- //   $(".open").attr('src',"assets/close.png");
- // });
+        	if($currentAnswer.is(':hidden')){
 
-    $(function() {
-  $('.open').click(function(){
-    $(".open").attr('src',"assets/close.png");
-  });
-});
+        		$('.answer').slideUp();
+        			$(this).removeClass('close');
+        			$(this).addClass('open');
+
+        		$currentAnswer.slideDown();
+        			$(this).removeClass('open');
+        			$(this).addClass('close');
+
+        	}else {
+        		$currentAnswer.slideUp();
+        			$(this).removeClass('close');
+        			$(this).addClass('open');
+        	}
+        }); //end of click function
+
+        // $('.main').find('.open').click(function() {
+
+        //     var $currentAnswer = $(this).next('.answer');
+        //     //Expand or collapse this panel
+        //     $(this).next().slideToggle('fast');
+        //     // if ($currentAnswer.is(':visible')){
+        //     // 	$(this).removeClass('close');
+        //     // 	$(this).addClass('open');
+        //     // }
+        //     //Hide the other panels
+        //     $(".answer").not($(this).next()).slideUp('fast');
+
+        // });
 
     }); // end of ready()
-
